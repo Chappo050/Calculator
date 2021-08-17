@@ -1,0 +1,103 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+    ". display ."
+    ". Calc-Area ."
+    ". . ."
+    ;
+}
+
+.Calc-Area{
+    display: grid;
+    grid-area: Calc-Area;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: 
+    "one two three add"
+    "four five six subtract"
+    "seven eight nine multiply"
+    "clear zero equals divide"
+    ;
+
+}
+
+.display{
+grid-area: display;
+font-size: 80px;
+justify-self: center;
+}
+
+#one{
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three{
+    grid-area: three;
+}
+
+#four{
+    grid-area: four;
+}
+
+#five{
+    grid-area: five;
+}
+
+#six{
+    grid-area: six;
+}
+
+#seven{
+    grid-area: seven;
+}
+
+#eight{
+    grid-area: eight;
+}
+
+#nine{
+    grid-area: nine;
+}
+
+#zero{
+    grid-area: zero;
+}
+
+#clear{
+    grid-area: clear;
+    background-color: darkcyan;
+}
+
+#equals{
+    grid-area: equals;
+    background-color: darkcyan;
+}
+
+#add{
+    grid-area: add;
+    background-color: bisque;
+}
+
+#subtract{
+    grid-area: subtract;
+    background-color: bisque;
+}
+
+#multiply{
+    grid-area: multiply;
+    background-color: bisque;
+}
+
+#divide{
+    grid-area: divide;
+    background-color: bisque;
+}
+
