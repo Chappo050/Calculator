@@ -101,7 +101,6 @@ function clickedOperator(text, oper) {
 
 function clearDisplay(bool) {
     if (bool) {
-        console.log("HAPPENING");
         display.innerText = "Enter a number.";
         firstNumber = NaN;
         emptyBool = true;
@@ -114,8 +113,35 @@ function clearDisplay(bool) {
         operBool = false;
 }
 
+
+function handleKeyboardInput(e) {
+    console.log(e);
+
+    if (e.key === "0") updateDisplay(0);
+    if (e.key === "1") updateDisplay(1);
+    if (e.key === "2") updateDisplay(2);
+    if (e.key === "3") updateDisplay(3);
+    if (e.key === "4") updateDisplay(4);
+    if (e.key === "5") updateDisplay(5);
+    if (e.key === "6") updateDisplay(6);
+    if (e.key === "7") updateDisplay(7);
+    if (e.key === "8") updateDisplay(8);
+    if (e.key === "9") updateDisplay(9);
+
+    if (e.key === "Escape") clearDisplay(1);
+    if (e.key === "Enter") document.getElementById("equals").click();
+    if (e.key === "/") clickedOperator("/", 4);
+    if (e.key === "+") clickedOperator("+", 1);
+    if (e.key === "-") clickedOperator("-", 2);
+    if (e.key === "*") clickedOperator("*", 3);
+    if (e.key === "/") clickedOperator("/", 4);
+}
+
+window.addEventListener('keydown', handleKeyboardInput);
+
+
 document.getElementById("zero").addEventListener("click", 
-function () {updateDisplay(0);}
+    function () {updateDisplay(0);}
 )
 
 document.getElementById("one").addEventListener("click",
